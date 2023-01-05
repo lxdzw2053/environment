@@ -1,6 +1,6 @@
 user_value=$(sed 's#.*/##' <<< $(pwd))
 
-PS1="%F{cyan} LxDs-Computer: ${user_value//$USER/~} $ %F{white}"
+PS1="%F{cyan} mac-zsh: ${user_value//$USER/~} $ %F{white}"
 
 foo () {
   if [[ $PWD == $HOME ]]; then
