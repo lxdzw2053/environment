@@ -1,3 +1,3 @@
 tell application "Music"
-	play playlist "The Radio"
+	play playlist "sawngz"
 end tell
