@@ -19,4 +19,7 @@ inoremap [ []<Esc>ha
 inoremap " ""<Esc>ha
 inoremap ' ''<Esc>ha
 inoremap ` ``<Esc>ha
+
+inoremap <C-d> <Esc>
+
 nnoremap <silent> <C-s> :vsplit <CR>
