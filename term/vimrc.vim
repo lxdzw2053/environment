@@ -7,10 +7,12 @@ filetype indent on
  
 set relativenumber 
 colorscheme slate
+
 if !exists("g:syntax_on")
     syntax enable
     filetype on
 endif 
+
 inoremap < <><Esc>ha
 inoremap ( ()<Esc>ha
 inoremap [ []<Esc>ha
