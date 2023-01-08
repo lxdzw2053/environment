@@ -13,12 +13,13 @@ alias songs="osascript ~/songs.applescript"
 # prompt
 user_value=$(sed 's#.*/##' <<< $(pwd))
 
-if `git rev-parse --is-inside-work-tree 2>/dev/null`; then
-	git_existence_status=" %F{magenta}git($(basename `git rev-parse --show-toplevel`))"
-else
-	git_existence_status=""
-fi
-PS1="%F{cyan}zsh: ${user_value//$USER/~}$git_existence_status%F{cyan} $ %F{white}"
+# speed optim - remove comment and add $git_existence_status to prompt if you don't care about cd load times
+# if `git rev-parse --is-inside-work-tree 2>/dev/null`; then
+# 	 git_existence_status=" %F{magenta}git($(basename `git rev-parse --show-toplevel`))"
+# else
+# 	 git_existence_status=""
+# fi
+PS1="%F{cyan}zsh: ${user_value//$USER/~}%F{cyan} $ %F{white}"
 
 
 foo () {
