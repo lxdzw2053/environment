@@ -1,3 +1,7 @@
+# gen.py
+# used to generate a random project name and project idea if I ever don't know what to code
+# corresponding zshrc alias is "whatshouldicode" - to see more, go to docs
+
 import random as r
 
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
@@ -20,6 +24,7 @@ def generate_repo():
 	ret["name"] = str("".join(name))
 	ret["project"] = str(r.choice(project_ideas))
 	
+	# prints out the dictionary
 	print("-------------------------------------------")
 	print("PROJECT: {}".format(ret["project"]))
 	print("NAME:    {}".format(ret["name"]))
