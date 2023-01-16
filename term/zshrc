@@ -4,7 +4,7 @@ alias zshrc="vim ~/.zshrc"
 
 # development speedup process
 alias flask-setup="python3 -m venv venv; touch app.py; mkdir templates"
-alias build-system="touch Makefile; mkdir Docker; touch Docker/Dockerfile; touch .gitignore; git init;"
+alias build-system="touch Makefile; mkdir Docker; touch Docker/Dockerfile; touch .gitignore; git init; mkdir src;"
 alias whatshouldicode="python3 gen.py"
 
 alias erotic="osascript ~/love.applescript"
