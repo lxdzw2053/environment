@@ -1,6 +1,6 @@
 # gen.py
 # used to generate a random project name and project idea if I ever don't know what to code
-# corresponding zshrc alias is "whatshouldicode" - to see more, go to docs
+# corresponding zshrc alias is "whatshouldicode" - to see more, see docs
 
 import random as r
 
