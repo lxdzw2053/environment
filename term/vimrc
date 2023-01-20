@@ -1,17 +1,20 @@
-set nu 
+set nu
+
 set tabstop=4
 set shiftwidth=4
 set autoindent
 set smartindent
 filetype indent on
- 
-set relativenumber 
-colorscheme slate
 
+set relativenumber
+set cursorline
+
+colorscheme slate
 if !exists("g:syntax_on")
     syntax enable
     filetype on
-endif 
+endif
+
 
 inoremap < <><Esc>ha
 inoremap ( ()<Esc>ha
@@ -22,4 +25,7 @@ inoremap ` ``<Esc>ha
 
 inoremap <C-d> <Esc>
 
-nnoremap <silent> <C-s> :vsplit <CR>
+nnoremap f ^
+nnoremap b $
+
+nnoremap <silent> <C-s> :vsplit <CR> 
