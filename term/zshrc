@@ -2,32 +2,36 @@
 alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/.zshrc"
 
+alias cat_vimrc="cat ~/.vimrc"
+alias cat_zshrc="cat ~/.zshrc"
+
 # development speedup process
 alias flask-setup="python3 -m venv venv; touch app.py; mkdir templates"
-alias build-system="touch readme.md; mkdir src; touch Makefile; mkdir Docker; touch Docker/Dockerfile; touch .gitignore; git init; mkdir src;"
-alias whatshouldicode="python3 gen.py"
+alias build-system="touch readme.md; mkdir src; touch Makefile; mkdir Docker; touch Docker/Dockerfile; touch .gitignore; git init;"
 
-alias love-songs="osascript ~/love.applescript"
-alias coding="osascript ~/code.applescript"
-alias songs="osascript ~/songs.applescript"
+alias whatshouldicode="python3 gen.py"
+alias love="osascript ~/love.applescript"
+alias work="osascript ~/code.applescript"
+alias music="osascript ~/songs.applescript"
 
 # prompt
 user_value=$(sed 's#.*/##' <<< $(pwd))
 
-# speed optim - remove comment and add $git_existence_status to prompt if you don't care about cd load times
-# if `git rev-parse --is-inside-work-tree 2>/dev/null`; then
-# 	 git_existence_status=" %F{magenta}git($(basename `git rev-parse --show-toplevel`))"
-# else
-# 	 git_existence_status=""
-# fi
-PS1="%F{cyan}zsh: ${user_value//$USER/~}%F{cyan} $ %F{white}"
+if `git rev-parse --is-inside-work-tree 2>/dev/null`; then
+	git_existence_status=" %F{red}git($(basename `git rev-parse --show-toplevel`))"
+else
+	git_existence_status=""
+fi
+PS1="%F{green}zsh: ${user_value//$USER/~}$git_existence_status%F{green} $ %F{white}"
 
 
 foo () {
   if [[ $PWD == $HOME ]]; then
-    source ~/.zshrc
+    source ~/.zshrc &&\
+		ls
   else
-    source ~/.zshrc
+    source ~/.zshrc &&\
+		ls
   fi
 }
 
