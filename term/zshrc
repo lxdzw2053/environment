@@ -5,6 +5,8 @@ alias zshrc="vim ~/.zshrc"
 alias cat_vimrc="cat ~/.vimrc"
 alias cat_zshrc="cat ~/.zshrc"
 
+alias zsh_reset="source ~/.zshrc"
+
 # development speedup process
 alias flask-setup="python3 -m venv venv; touch app.py; mkdir templates"
 alias build-system="touch readme.md; mkdir src; touch Makefile; mkdir Docker; touch Docker/Dockerfile; touch .gitignore; git init;"
@@ -18,21 +20,21 @@ alias music="osascript ~/songs.applescript"
 user_value=$(sed 's#.*/##' <<< $(pwd))
 
 if `git rev-parse --is-inside-work-tree 2>/dev/null`; then
-	git_existence_status=" %F{red}git($(basename `git rev-parse --show-toplevel`))"
+	git_existence_status=" %F{009}git($(basename `git rev-parse --show-toplevel`))"
 else
 	git_existence_status=""
 fi
-PS1="%F{green}zsh: ${user_value//$USER/~}$git_existence_status%F{green} $ %F{white}"
+PS1="%F{023}zsh: ${user_value//$USER/~}$git_existence_status%F{023} $ %F{white}"
 
-
-foo () {
+reset_zshrc () {
   if [[ $PWD == $HOME ]]; then
-    source ~/.zshrc &&\
-		ls
+    source ~/.zshrc
   else
-    source ~/.zshrc &&\
-		ls
+    source ~/.zshrc
   fi
 }
 
-chpwd_functions+=(foo)
+chpwd_functions+=(reset_zshrc)
+
+# custom command for listing directories while going into a different directory
+cdls() {cd "$@" && ls}
