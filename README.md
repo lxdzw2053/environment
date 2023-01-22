@@ -1,2 +1,1 @@
 ## environment
-configs, dotfiles, shortcuts
