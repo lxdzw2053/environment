@@ -27,14 +27,23 @@ fi
 PS1="%F{023}zsh: ${user_value//$USER/~}$git_existence_status%F{023} $ %F{white}"
 
 reset_zshrc () {
-  if [[ $PWD == $HOME ]]; then
-    source ~/.zshrc
-  else
-    source ~/.zshrc
-  fi
+	if [[ $PWD == $HOME ]]; then
+		source ~/.zshrc
+	else
+		source ~/.zshrc
+	fi
 }
 
 chpwd_functions+=(reset_zshrc)
 
 # custom command for listing directories while going into a different directory
 cdls() {cd "$@" && ls}
+
+# custom command that checks for the existence of a file
+e() {
+	if [ -e "$@" ]; then
+		echo "found :)"
+	else
+		echo "not found :("
+	fi
+}
