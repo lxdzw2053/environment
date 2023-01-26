@@ -1,3 +1,5 @@
+cd ~/desktop;
+
 # quick debugging shortcuts
 alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/.zshrc"
