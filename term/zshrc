@@ -38,10 +38,16 @@ reset_zshrc () {
 
 chpwd_functions+=(reset_zshrc)
 
-# custom command for listing directories while going into a different directory
+# function for listing directories while going into a different directory
 cdls() {cd "$@" && ls}
 
-# custom command that checks for the existence of a file
+# function for relplacing ls -a
+lsa() {ls -a}
+
+# function for adding -a to my cdls function 
+cdlsa() {cd "$@" && ls -a}
+
+# function that checks for the existence of a file
 e() {
 	if [ -e "$@" ]; then
 		echo "found :)"
