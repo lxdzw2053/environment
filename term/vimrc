@@ -27,6 +27,7 @@ inoremap >> >>
 inoremap << <<
 
 inoremap <C-d> <Esc>
+inoremap <C-_> //
 
 nnoremap f ^
 nnoremap b $
