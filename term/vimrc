@@ -23,6 +23,9 @@ inoremap " ""<Esc>ha
 inoremap ' ''<Esc>ha
 inoremap ` ``<Esc>ha
 
+inoremap >> >>
+inoremap << <<
+
 inoremap <C-d> <Esc>
 
 nnoremap f ^
