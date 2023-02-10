@@ -1,2 +1,2 @@
 # echo the directories on my desktop in a clean way! :)
-echo "------------------------------ \n------------DESKTOP-----------\n" &&     ls desktop && echo "------------------------------";
+echo "------------DESKTOP-----------" && ls desktop && echo "------------------------------";
