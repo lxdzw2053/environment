@@ -1,5 +1,5 @@
+" configs
 set nu
-
 set tabstop=4
 set shiftwidth=4
 set autoindent
@@ -15,21 +15,16 @@ if !exists("g:syntax_on")
     filetype on
 endif
 
-
+" conveniency keybinds
 inoremap < <><Esc>ha
-inoremap ( ()<Esc>ha
-inoremap [ []<Esc>ha
-inoremap " ""<Esc>ha
-inoremap ' ''<Esc>ha
-inoremap ` ``<Esc>ha
 
 inoremap >> >>
 inoremap << <<
 
 inoremap <C-d> <Esc>
-inoremap <C-_> //
+inoremap <C-_> //<space>
 
 nnoremap f ^
 nnoremap b $
 
-nnoremap <silent> <C-s> :vsplit <CR> 
+nnoremap <silent> <C-s> :vsplit <CR>
