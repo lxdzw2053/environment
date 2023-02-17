@@ -14,9 +14,6 @@ alias flask-setup="python3 -m venv venv; touch app.py; mkdir templates"
 alias build-system="touch readme.md; mkdir src; touch Makefile; mkdir Docker; touch Docker/Dockerfile; touch .gitignore; git init;"
 
 alias whatshouldicode="python3 gen.py"
-alias love="osascript ~/love.applescript"
-alias work="osascript ~/code.applescript"
-alias music="osascript ~/songs.applescript"
 
 # prompt
 user_value=$(sed 's#.*/##' <<< $(pwd))
