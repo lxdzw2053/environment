@@ -15,7 +15,7 @@ set relativenumber
 set cursorline
 
 
-" general keybinds keybinds
+" general keybinds
 inoremap < <><Esc>ha
 
 inoremap >> >>
