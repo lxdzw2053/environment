@@ -1,21 +1,21 @@
-" configs
-set nu
+" visual configs
 set tabstop=4
 set shiftwidth=4
 set autoindent
 set smartindent
 filetype indent on
+colorscheme slate
+syntax enable
+filetype on
 
+" dev experience configs
+set nu
+set hlsearch
 set relativenumber
 set cursorline
 
-colorscheme slate
-if !exists("g:syntax_on")
-    syntax enable
-    filetype on
-endif
 
-" conveniency keybinds
+" general keybinds keybinds
 inoremap < <><Esc>ha
 
 inoremap >> >>
